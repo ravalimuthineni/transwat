@@ -1,0 +1,311 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #aabbfb;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  max-width: 100%;
+  background: linear-gradient(135deg, #1fd8e9, #0f5a77);
+  color: black;
+  overflow-x:hidden;
+  padding: 2rem;
+  height: 90%;
+}
+
+.header-gallery-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 600px;
+}
+
+.image-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden; /* Ensures any overflow is hidden */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the entire container */
+}
+
+.left {
+  flex: 1;
+}
+
+.header h3 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.graphik {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.gallery {
+  flex: 1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  --s: 140px;
+  --g: 13px;
+  position: relative;
+ padding-top: 200px;
+    margin: 150px;
+}
+
+.gallery > img {
+  grid-area: 1/1;
+  width: var(--s);
+  aspect-ratio: 0.866;
+  object-fit: cover;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
+  transform: translate(var(--_x, 0), var(--_y, 0)) scale(var(--_t, 1));
+  transition: 0.2s linear, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a basic shadow to the image */
+}
+
+/* On hover, add a stronger shadow and scale the image */
+.gallery > img:hover {
+  filter: grayscale(0);
+  z-index: 1;
+  --_t: 1.1; /* Slight zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  transform: translate(var(--_x, 0), var(--_y, 0)) scale(1.1); /* Slight lift effect */
+}
+
+
+.gallery > img:nth-child(1) { --_x: calc(-100% - var(--g)); }
+.gallery > img:nth-child(2) { --_x: 0; }
+.gallery > img:nth-child(3) { --_x: calc(-50% - 0.5 * var(--g)); --_y: calc(-75% - 0.87 * var(--g)); }
+.gallery > img:nth-child(4) { --_x: calc(-50% - 0.5 * var(--g)); --_y: calc(75% + 0.87 * var(--g)); }
+.gallery > img:nth-child(5) { --_x: calc(50% + 0.5 * var(--g)); --_y: calc(-75% - 0.87 * var(--g)); }
+.gallery > img:nth-child(6) { --_x: calc(50% + 0.5 * var(--g)); --_y: calc(75% + 0.87 * var(--g)); }
+.gallery > img:nth-child(7) { --_x: calc(100% + var(--g)); }
+
+.card-row-height {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bar {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 10px;  /* Rounded edges */
+  overflow: hidden; /* To ensure the filledbar is contained within */
+}
+
+.filledbar {
+  width: 0%; /* Initially no green fill */
+  height: 100%;
+  background-color: #4a7706; /* Green color */
+  border-radius: 10px; /* Rounded edges */
+  transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+.card:hover .filledbar {
+  width: 50%; /* On hover, fill 50% of the bar with green */
+}
+
+.card-title-row {
+  height: 10px;
+}
+
+.card-padding-top {
+  padding-top: 100pt;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.list-margin {
+  margin-left: -15px;
+}
+
+.hide-card {
+  visibility: hidden;
+  min-width: 34%;
+}
+
+.header {
+  top: 40px;
+  left: 50px;
+  height: 23px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: black;
+  opacity: 1;
+  font-size: 25px;
+  position: relative;
+  font-weight: 500;
+  font-family: Graphik;
+}
+
+.header :hover {
+  color: #ffffff !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .card-row-height {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-row-height {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+  }
+
+  .gallery > img {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-row-height {
+    grid-template-columns: 1fr; /* 1 card per row on extra small screens */
+  }
+}
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease;
+  height: 100%;
+}
+
+.slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    max-width: 60%;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .slide-link {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      background-color: #1fd8e9;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ffffff;
+        color: #0f5a77;
+      }
+    }
+  }
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  transition: background 0.3s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &.left {
+    left: 10px;
+  }
+
+  &.right {
+    right: 10px;
+  }
+}
+

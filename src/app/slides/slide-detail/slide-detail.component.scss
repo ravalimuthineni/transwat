@@ -1,0 +1,38 @@
+.sector-detail-container {
+  position: relative;
+  padding: 20px 30px;
+  color: #000; /* Text color black */
+  min-height: 100vh;
+  z-index: 0;
+}
+
+/* Background image overlay */
+.sector-detail-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/abstract-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15; /* Lower opacity for image */
+  z-index: -1; /* Send behind content */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000;
+
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}

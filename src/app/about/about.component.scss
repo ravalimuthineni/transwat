@@ -1,0 +1,75 @@
+/* src/app/about/about.component.css */
+.about-us-page {
+  background: #f0f7ff; /* Lightest blue background */
+//   padding: 80px 2rem;
+  background-image: url('/assets/abstract-bg.jpeg'); /* Add your abstract background image here */
+  background-size: cover; /* Ensures the background image covers the entire section */
+  background-position: center;
+  color: black;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+//   height: 100%;
+}
+
+.about-us-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight white background with transparency */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow around the content */
+}
+
+.about-us-content h2 {
+  font-size: 2.5rem;
+  color: black; /* Color for the main heading */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-us-content h3 {
+  font-size: 1.8rem;
+  color: #004d40; /* Color for subheadings */
+  margin-top: 20px;
+}
+
+.about-us-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-us-page ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.about-us-page ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: black; /* Slightly muted text color for list items */
+}
+
+.about-us-page ul li::before {
+  content: "•"; /* Bullet point style */
+  color: black; /* Green bullet point */
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-us-page {
+    padding: 30px 10px;
+  }
+
+  .about-us-content {
+    padding: 1rem;
+  }
+
+  .about-us-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-us-content h3 {
+    font-size: 1.5rem;
+  }
+}

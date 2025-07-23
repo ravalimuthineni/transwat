@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.back-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -3.5rem;
+}
+
+.back-button {
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #1565c0;
+}

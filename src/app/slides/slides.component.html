@@ -1,0 +1,53 @@
+<!-- SLIDER -->
+<div class="slide-wrapper">
+  <img [src]="currentSlide.image" class="slide-image" alt="Slide Image" />
+  <div class="slide-overlay">
+    <h1>{{ currentSlide.title }}</h1>
+    <p>{{ currentSlide.description }}</p>
+<button class="read-more" (click)="navigateTo(currentSlide.route)">
+  Read More →
+</button>
+
+
+  </div>
+  <button class="nav prev" (click)="onManualNavigation('prev')">‹</button>
+  <button class="nav next" (click)="onManualNavigation('next')">›</button>
+</div>
+
+<!-- ABOUT US -->
+<div class="about-section">
+  <div class="overlay"></div>
+  <div class="about-content">
+    <h2>About Us</h2>
+    <p>
+      Partnering through the entire asset life cycle; from concept to commissioning, we deliver integrated engineering solutions you can trust.
+    </p>
+    <a [routerLink]="'/about'" class="about-link">Learn More →</a>
+
+    <div class="about-stats">
+      <div class="stat"><span>63+</span><br />Years of Technical Excellence</div>
+      <div class="stat"><span>12,000+</span><br />Projects Across 65+ Countries</div>
+      <div class="stat"><span>$35+Bn</span><br />Worth of Projects Managed</div>
+      <div class="stat"><span>7,000+</span><br />Engineering Talent</div>
+    </div>
+
+    <h3 class="excellence-text">Engineering Excellence In Every Experience</h3>
+  </div>
+</div>
+
+<!-- CARDS -->
+<section class="services-section">
+  <h2 class="services-heading">Our Core Sectors</h2>
+  <div class="card-grid">
+   <div class="card pointer" *ngFor="let card of cards" [routerLink]="card.route">
+  <h3 class="title">{{ card.title }}</h3>
+  <div class="card-text-container text-center">
+    <div class="card-text">{{ card.description }}</div>
+  </div>
+  <div class="bar">
+    <div class="filledbar"></div>
+  </div>
+</div>
+
+  </div>
+</section>

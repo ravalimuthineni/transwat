@@ -1,0 +1,99 @@
+<div class="sector-detail-container" *ngIf="slideId">
+  <ng-container [ngSwitch]="slideId">
+<div class="back-button-wrapper">
+    <a routerLink="/home" class="back-button">Back</a>
+  </div>
+    <!-- Slide 1: Roadways -->
+    <div *ngSwitchCase="'roads'">
+      <h1>Highways, Bridges & Expressways</h1>
+      <h4>Development of road networks in India is essential not only for supporting the economy but it also facilitates easy and economical mode of transport for all classes of the society, faster and comprehensive reach to the markets.Transwat Techno Engineering formerly Wadia Techno-Engineering Services Ltd has executed many projects in transportation sector.</h4>
+      <p>
+        With 60+ years of expertise, Transwat has delivered world-class infrastructure across India:
+      </p>
+      <ul>
+        <li>Highways, Expressways, and Elevated Roads (flexible & rigid pavements)</li>
+        <li>Flyovers, ROBs, Major Bridges and Grade Separators</li>
+        <li>Urban arterial roads, logistic corridors, city smart roads</li>
+        <li>Feasibility studies, DPR, tendering, and authority engineer services</li>
+      </ul>
+      <h2>Key Projects</h2>
+      <ul>
+        <li>NH-216 – Kathipudi to Kakinada, Andhra Pradesh</li>
+        <li>Uppal 6-Lane Elevated Corridor, Hyderabad, Telangana</li>
+        <li>Flyover at Kharghar and Nerul Junctions, Mumbai (Cable-stayed spans)</li>
+        <li>Chennai–Ranipet Four-Laning Project, Tamil Nadu</li>
+        <li>Rohtak–Jind Section of NH-71, Haryana</li>
+      </ul>
+    </div>
+
+    <!-- Slide 2: Dams -->
+    <div *ngSwitchCase="'dams'">
+      <h1>Dams, Reservoirs & Lift Irrigation</h1>
+      <p>Transwat has been pivotal in water infrastructure:</p>
+      <ul>
+        <li>Dams, Canals, Reservoirs, Tunnels, and Lift Irrigation Systems</li>
+        <li>Handled over 69 EPC Major Irrigation Projects valued above ₹10,000 Cr</li>
+        <li>Specialized QC services, feasibility, and DPRs</li>
+      </ul>
+      <h2>Highlights</h2>
+      <p>Expertise includes radial gates, embankment dams, canal networks, and irrigation tunnels.</p>
+    </div>
+
+    <!-- Slide 3: Buildings -->
+    <div *ngSwitchCase="'buildings'">
+      <h1>Buildings & Institutions</h1>
+      <p>Specialized consultancy for:</p>
+      <ul>
+        <li>Universities, IITs, medical colleges, law schools</li>
+        <li>Corporate towers, government buildings, and civic centers</li>
+        <li>Design & PMC for hospitals, hotels, training centers</li>
+      </ul>
+      <h2>Notable Projects</h2>
+      <ul>
+        <li>Delhi Metro Rail Corp HQ</li>
+        <li>Aliah University Campus, West Bengal (Rs. 236 Cr)</li>
+        <li>Statesman House, New Delhi</li>
+        <li>DG Married Accommodation Projects (DG-MAP) across cities</li>
+      </ul>
+    </div>
+
+    <!-- Slide 4: Irrigation -->
+    <div *ngSwitchCase="'irrigation'">
+      <h1>Irrigation Infrastructure</h1>
+      <p>
+        Expertise spans across major and minor irrigation projects. Services include:
+      </p>
+      <ul>
+        <li>Topographic surveys, hydraulic analysis, tunnel design</li>
+        <li>Feasibility Reports & Detailed Project Reports (DPR)</li>
+        <li>Canal automation, command area development, SCADA systems</li>
+      </ul>
+      <p>Major engagements in Andhra Pradesh, Odisha, and Telangana.</p>
+    </div>
+
+    <!-- Slide 5: Hotels -->
+    <div *ngSwitchCase="'hotels'">
+      <h1>Hotels, Tourism & Entertainment</h1>
+      <p>PMC, architectural and MEP services for:</p>
+      <ul>
+        <li>Luxury hotels, resorts, convention centers, multiplexes</li>
+        <li>Design reviews, MEP coordination, cost estimation</li>
+        <li>Expertise in interior planning, HVAC, IBMS, and STP systems</li>
+      </ul>
+      <h2>Landmark Projects</h2>
+      <ul>
+        <li>Grand Hyatt Mumbai – 651 rooms, retail, ballroom, ₹620 Cr</li>
+        <li>Novotel Shamshabad Hyderabad – 308 rooms, 6 floors</li>
+        <li>Hotel Grand InterContinental Mumbai – 340 rooms + banquet</li>
+        <li>Fun Republic Mall & Hotel, Lucknow – ₹60 Cr</li>
+        <li>INOX Multiplex, Vadodara – ₹25 Cr</li>
+      </ul>
+    </div>
+
+    <!-- Default Fallback -->
+    <div *ngSwitchDefault>
+      <h2>Slide content not available.</h2>
+    </div>
+
+  </ng-container>
+</div>
