@@ -213,3 +213,25 @@
     }
   }
 }
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.read-more, .download-btn {
+  padding: 8px 16px;
+  background-color: #005d8f;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover, .download-btn:hover {
+  background-color: #003d60;
+}
+

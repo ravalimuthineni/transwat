@@ -16,33 +16,39 @@ slides = [
     image: 'assets/highway.jpeg',
     title: 'Transportation',
     description: '60+ years of strengthening India’s roads, bridges, and highways.',
-    route: '/slide-detail/roads'
+    route: '/slide-detail/roads',
+    ppt: 'assets/TranswatCompanyProfile_highways.pptx'
   },
   {
-    image: 'assets/slide3.png',
+    image: 'assets/dam4.jpeg',
     title: 'Dams & Reservoirs',
     description: 'Creating sustainable water solutions across India.',
-    route: '/slide-detail/dams'
+    route: '/slide-detail/dams',
+    ppt: 'assets/TranswatCompanyProfile_WaterResource.pptx'
   },
   {
     image: 'assets/4.png',
     title: 'Buildings & Institutions',
     description: 'Institutes, hospitals, and civic buildings that serve society.',
-    route: '/slide-detail/buildings'
+    route: '/slide-detail/buildings',
+    ppt: 'assets/TranswatCompanyProfile_institutional.pptx'
   },
-  {
-    image: 'assets/2.png',
-    title: 'Irrigation',
-    description: 'Efficient water systems for agriculture and rural development.',
-    route: '/slide-detail/irrigation'
-  },
+  // {
+  //   image: 'assets/2.png',
+  //   title: 'Irrigation',
+  //   description: 'Efficient water systems for agriculture and rural development.',
+  //   route: '/slide-detail/irrigation',
+  //   ppt: 'assets/ppt/irrigation.pptx'
+  // },
   {
     image: 'assets/hotels.png',
     title: 'Hospitality',
     description: 'End-to-end solutions for luxury hotels, resorts, and entertainment hubs.',
-    route: '/slide-detail/hotels'
+    route: '/slide-detail/hotels',
+    ppt: 'assets/TranswatCompanyProfile_HospitalitySector.pptx'
   }
 ];
+
 
  cards = [
   {

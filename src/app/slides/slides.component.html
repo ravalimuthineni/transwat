@@ -2,14 +2,18 @@
 <div class="slide-wrapper">
   <img [src]="currentSlide.image" class="slide-image" alt="Slide Image" />
   <div class="slide-overlay">
-    <h1>{{ currentSlide.title }}</h1>
-    <p>{{ currentSlide.description }}</p>
-<button class="read-more" (click)="navigateTo(currentSlide.route)">
-  Read More →
-</button>
-
-
+  <h1>{{ currentSlide.title }}</h1>
+  <p>{{ currentSlide.description }}</p>
+  <div class="button-group">
+    <button class="read-more" (click)="navigateTo(currentSlide.route)">
+      Read More →
+    </button>
+    <a class="download-btn" [href]="currentSlide.ppt" download>
+      Download PPT ⬇
+    </a>
   </div>
+</div>
+
   <button class="nav prev" (click)="onManualNavigation('prev')">‹</button>
   <button class="nav next" (click)="onManualNavigation('next')">›</button>
 </div>
@@ -24,12 +28,12 @@
     </p>
     <a [routerLink]="'/about'" class="about-link">Learn More →</a>
 
-    <div class="about-stats">
+    <!-- <div class="about-stats">
       <div class="stat"><span>63+</span><br />Years of Technical Excellence</div>
       <div class="stat"><span>12,000+</span><br />Projects Across 65+ Countries</div>
       <div class="stat"><span>$35+Bn</span><br />Worth of Projects Managed</div>
       <div class="stat"><span>7,000+</span><br />Engineering Talent</div>
-    </div>
+    </div> -->
 
     <h3 class="excellence-text">Engineering Excellence In Every Experience</h3>
   </div>

@@ -9,7 +9,7 @@ import { SectorDetailComponent } from './sector-detail/sector-detail.component';
 import { SlideDetailComponent } from './slides/slide-detail/slide-detail.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: SlidesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },

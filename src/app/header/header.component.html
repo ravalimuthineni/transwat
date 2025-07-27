@@ -3,14 +3,14 @@
     
     <!-- Logo with stacked text -->
     <div class="logo-section">
-      <img src="assets/logo.png.jpeg" alt="Transwat Logo" class="logo-image" />
+      <img src="assets/logo2.png" alt="Transwat Logo" class="logo-image" />
       <div class="logo-text">(Formerly Wadia Engg)</div>
     </div>
 
     <!-- Navigation -->
     <nav class="main-nav">
       <ul class="nav-list">
-        <li><a (click)="navigateTo('/')">Home</a></li>
+        <li><a (click)="navigateTo('/home')">Home</a></li>
         <li class="dropdown" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
           <a class="dropdown-toggle">Sectors</a>
           <ul class="dropdown-menu" *ngIf="showDropdown">
